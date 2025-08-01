@@ -3,8 +3,9 @@
 # YUKUN ZHOU 2023-08-24
 # Updated: 2025-06-21
 
+start=$(date +%s)
 date
-
+export CUDA_VISIBLE_DEVICES='1'
 # ----------------------------- #
 # Parse optional arguments
 # ----------------------------- #
@@ -119,3 +120,4 @@ fi
 
 echo "### Done ###"
 date
+echo time $(( $(date +%s) - $start ))
